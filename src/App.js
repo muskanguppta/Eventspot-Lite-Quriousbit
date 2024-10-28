@@ -7,6 +7,7 @@ import { events } from './mockData';
 import Navbar from './components/Navbar';
 import EventList from './components/EventList';
 import EventModal from './components/EventModal';
+import Footer from './components/Footer';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,6 +23,7 @@ function App() {
       <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <EventList events={events} openModal={openModal} searchQuery={searchQuery} />
       <EventModal event={selectedEvent} closeModal={closeModal} />
+      <Footer/>
     </div>
   );
 }
